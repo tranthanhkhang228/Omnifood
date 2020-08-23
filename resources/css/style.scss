@@ -1,0 +1,149 @@
+$headerWidth: 1140px;
+$primaryColor: #e67e22;
+$secondaryColor: #fff;
+
+/*-------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $secondaryColor;
+
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/*-------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-------------------------------------*/
+
+.row {
+  max-width: $headerWidth;
+  margin: 0 auto;
+}
+
+/*----- HEADINGS -----*/
+
+h1 {
+  margin: 0 0 20px;
+
+  color: $secondaryColor;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+/*----- BUTTONS -----*/
+
+// Reversing background color and text color of a button when hover on it
+@mixin reverseBtnStyle($backgroundColor, $textColor) {
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 10px 30px;
+
+    font-weight: 300;
+    text-decoration: none;
+
+    border: 1px solid $primaryColor;
+    border-radius: 200px;
+
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  &--full {
+    @include reverseBtnStyle($primaryColor, $secondaryColor);
+    margin-right: 10px;
+
+    &:hover,
+    &:active {
+      @include reverseBtnStyle(transparent, $primaryColor);
+    }
+  }
+
+  &--ghost {
+    @include reverseBtnStyle(transparent, $primaryColor);
+
+    &:hover,
+    &:active {
+      @include reverseBtnStyle($primaryColor, $secondaryColor);
+    }
+  }
+}
+
+/*-------------------------------------*/
+/* HEADER */
+/*-------------------------------------*/
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero.jpg) no-repeat center;
+  background-size: cover;
+
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: $headerWidth;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+
+  float: left;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 55px;
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a {
+  &:link,
+  &:visited {
+    padding: 8px 0;
+
+    font-size: 90%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: 2px solid $primaryColor;
+  }
+}

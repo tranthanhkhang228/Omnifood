@@ -1,0 +1,123 @@
+/*-------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/*-------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-------------------------------------*/
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/*----- HEADINGS -----*/
+h1 {
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+/*----- BUTTONS -----*/
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border: 1px solid #e67e22;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn--full {
+  background-color: #e67e22;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.btn--full:hover, .btn--full:active {
+  background-color: transparent;
+  color: #e67e22;
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: #e67e22;
+}
+
+.btn--ghost:hover, .btn--ghost:active {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/*-------------------------------------*/
+/* HEADER */
+/*-------------------------------------*/
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1140px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+  float: left;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 55px;
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link, .main-nav li a:visited {
+  padding: 8px 0;
+  font-size: 90%;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+/*# sourceMappingURL=style.css.map */
