@@ -31,18 +31,83 @@ html {
   margin: 0 auto;
 }
 
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
 /*----- HEADINGS -----*/
+@mixin headingStyle(
+  $marginBottom: 0,
+  $color: #555,
+  $fontSize: 0,
+  $wordSpacing: 0,
+  $letterSpacing: 0
+) {
+  margin-bottom: $marginBottom;
 
-h1 {
-  margin: 0 0 20px;
+  color: $color;
+  font-size: $fontSize;
+  word-spacing: $wordSpacing;
+  letter-spacing: $letterSpacing;
+}
 
-  color: $secondaryColor;
-  font-size: 240%;
+h1,
+h2,
+h3 {
   font-weight: 300;
   text-transform: uppercase;
+}
 
-  letter-spacing: 1px;
-  word-spacing: 3px;
+h1 {
+  margin-top: 0;
+  @include headingStyle(20px, $secondaryColor, 240%, 4px, 1px);
+}
+
+h2 {
+  text-align: center;
+  @include headingStyle(30px, null, 180%, 2px, 1px);
+}
+
+h3 {
+  @include headingStyle(15px, null, 110%, null, null);
+}
+
+h2::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 100px;
+  margin: 30px auto 0;
+
+  background-color: $primaryColor;
+}
+
+/*----- PARAGRAPHS -----*/
+
+.long-copy {
+  width: 70%;
+  margin-left: 15%; // To center the paragraph, total width is 100% = 15(left) + 70(paragraph) + 15(right)
+
+  line-height: 145%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+  text-align: justify;
+}
+
+/*----- ICONS -----*/
+
+.icon--big {
+  font-size: 350%;
+  display: block;
+  color: $primaryColor;
+  margin-bottom: 10px;
 }
 
 /*----- BUTTONS -----*/
@@ -110,11 +175,11 @@ header {
 }
 
 .logo {
+  float: left;
+
   height: 100px;
   width: auto;
   margin-top: 20px;
-
-  float: left;
 }
 
 .main-nav {
