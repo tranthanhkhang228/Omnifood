@@ -199,7 +199,7 @@ header {
     padding: 8px 0;
 
     font-size: 90%;
-    color: #fff;
+    color: $secondaryColor;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -210,5 +210,58 @@ header {
   &:hover,
   &:active {
     border-bottom: 2px solid $primaryColor;
+  }
+}
+
+/*-------------------------------------*/
+/* MEALS */
+/*-------------------------------------*/
+
+.section-feature .long-copy {
+  margin-bottom: 40px;
+}
+
+/*-------------------------------------*/
+/* MEALS */
+/*-------------------------------------*/
+.section-meals {
+  padding: 0;
+
+  &__showcase {
+    width: 100%;
+    list-style: none;
+
+    li {
+      display: block;
+      float: left;
+      width: 25%;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    margin: 0;
+
+    /* 
+    Default bg color is white, the following opacity on img make it lighter instead of darker
+    So we have to make it black, so when we hover on image, it become more lighter
+    */
+    background-color: #000;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      opacity: 0.7;
+      transform: scale(1.15);
+      transition: transform 0.5s, opacity 0.5s;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }
