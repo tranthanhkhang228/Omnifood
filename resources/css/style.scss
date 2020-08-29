@@ -22,6 +22,14 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix::after {
+  content: ' ';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 /*-------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*-------------------------------------*/
@@ -76,6 +84,7 @@ h3 {
   @include headingStyle(15px, null, 110%, null, null);
 }
 
+// horizontal bar below heading
 h2::after {
   content: ' ';
   display: block;
@@ -224,6 +233,7 @@ header {
 /*-------------------------------------*/
 /* MEALS */
 /*-------------------------------------*/
+
 .section-meals {
   padding: 0;
 
@@ -262,6 +272,62 @@ header {
         opacity: 1;
         transform: scale(1);
       }
+    }
+  }
+}
+
+/*-------------------------------------*/
+/* HOW IT WORKS */
+/*-------------------------------------*/
+
+.section-steps {
+  background-color: #f4f4f4;
+
+  &__box {
+    &:first-child {
+      margin-top: 30px;
+      padding-right: 3%;
+      text-align: right;
+    }
+
+    &:last-child {
+      margin-top: 70px;
+      padding-left: 3%;
+    }
+  }
+
+  &__app-screen {
+    width: 40%;
+  }
+
+  &__works-step {
+    margin-bottom: 50px;
+
+    div {
+      float: left;
+      width: 55px;
+      height: 55px;
+      margin-right: 25px;
+      padding: 5px;
+
+      font-size: 150%;
+      color: $primaryColor;
+      text-align: center;
+
+      border: 2px solid $primaryColor;
+      border-radius: 50%;
+    }
+
+    &:last-of-type {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__btn-app {
+    img {
+      height: 50px;
+      width: auto;
+      margin-right: 10px;
     }
   }
 }
