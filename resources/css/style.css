@@ -95,10 +95,38 @@ h2::after {
 
 /*----- ICONS -----*/
 .icon--big {
-  font-size: 350%;
   display: block;
+  font-size: 350%;
   color: #e67e22;
   margin-bottom: 10px;
+}
+
+.icon--small {
+  display: inline-block;
+  font-size: 120%;
+  color: #e67e22;
+  width: 30px;
+  margin-right: 10px;
+  text-align: center;
+  /* To align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/*----- LINKS -----*/
+a:link, a:visited {
+  padding-bottom: 1px;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover, a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
 }
 
 /*----- BUTTONS -----*/
@@ -187,7 +215,7 @@ header {
 }
 
 /*-------------------------------------*/
-/* MEALS */
+/* FEATURE */
 /*-------------------------------------*/
 .section-feature .long-copy {
   margin-bottom: 40px;
@@ -284,9 +312,21 @@ header {
   margin-bottom: 80px;
 }
 
+.section-steps__btn-app:link, .section-steps__btn-app:visited {
+  border: 0;
+}
+
 .section-steps__btn-app img {
-  height: 50px;
   width: auto;
+  height: 50px;
   margin-right: 10px;
+}
+
+/*-------------------------------------*/
+/* CITIES*/
+/*-------------------------------------*/
+.section-cities img {
+  max-width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

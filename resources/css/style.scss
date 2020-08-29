@@ -111,14 +111,51 @@ h2::after {
 }
 
 /*----- ICONS -----*/
+@mixin iconStyle($display: none, $fontSize: 0, $color: black) {
+  display: $display;
 
-.icon--big {
-  font-size: 350%;
-  display: block;
-  color: $primaryColor;
-  margin-bottom: 10px;
+  font-size: $fontSize;
+  color: $color;
 }
 
+.icon {
+  &--big {
+    @include iconStyle(block, 350%, $primaryColor);
+    margin-bottom: 10px;
+  }
+  &--small {
+    @include iconStyle(inline-block, 120%, $primaryColor);
+
+    width: 30px;
+    margin-right: 10px;
+
+    text-align: center;
+
+    /* To align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+}
+
+/*----- LINKS -----*/
+a {
+  &:link,
+  &:visited {
+    padding-bottom: 1px;
+    color: $primaryColor;
+    text-decoration: none;
+
+    border-bottom: 1px solid $primaryColor;
+    transition: border-bottom 0.2s, color 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+  }
+}
 /*----- BUTTONS -----*/
 
 // Reversing background color and text color of a button when hover on it
@@ -223,7 +260,7 @@ header {
 }
 
 /*-------------------------------------*/
-/* MEALS */
+/* FEATURE */
 /*-------------------------------------*/
 
 .section-feature .long-copy {
@@ -324,10 +361,24 @@ header {
   }
 
   &__btn-app {
+    &:link,
+    &:visited {
+      border: 0;
+    }
+
     img {
-      height: 50px;
       width: auto;
+      height: 50px;
       margin-right: 10px;
     }
   }
+}
+
+/*-------------------------------------*/
+/* CITIES*/
+/*-------------------------------------*/
+
+.section-cities img {
+  max-width: 100%;
+  height: auto;
 }
