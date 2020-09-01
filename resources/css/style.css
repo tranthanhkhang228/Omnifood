@@ -166,8 +166,8 @@ a:hover, a:active {
 /* HEADER */
 /*-------------------------------------*/
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg) no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg) no-repeat fixed center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat fixed center;
   background-size: cover;
   height: 100vh;
 }
@@ -323,10 +323,50 @@ header {
 }
 
 /*-------------------------------------*/
-/* CITIES*/
+/* CITIES */
 /*-------------------------------------*/
 .section-cities img {
   max-width: 100%;
   height: auto;
+}
+
+/*-------------------------------------*/
+/* TESTIMONIALS */
+/*-------------------------------------*/
+.section-testimonials {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg) no-repeat fixed center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg) no-repeat fixed center;
+  background-size: cover;
+  color: #fff;
+}
+
+.section-testimonials blockquote {
+  position: relative;
+  margin-top: 40px;
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+}
+
+.section-testimonials blockquote::before {
+  content: '\201C';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  font-size: 500%;
+}
+
+.section-testimonials cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 90%;
+}
+
+.section-testimonials cite img {
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
