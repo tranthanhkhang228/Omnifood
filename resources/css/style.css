@@ -147,6 +147,10 @@ a:hover, a:active {
   margin-right: 10px;
 }
 
+.btn--full:link, .btn--full:visited {
+  color: #fff;
+}
+
 .btn--full:hover, .btn--full:active {
   background-color: transparent;
   color: #e67e22;
@@ -368,5 +372,61 @@ header {
   margin-right: 10px;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+/*-------------------------------------*/
+/* SIGN UP */
+/*-------------------------------------*/
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.section-plans__box {
+  width: 90%;
+  margin-left: 5%;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 2px #efefef;
+          box-shadow: 0 2px 2px #efefef;
+}
+
+.section-plans__box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.section-plans__box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.section-plans__box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+.section-plans__box ul {
+  list-style: none;
+}
+
+.section-plans__box ul li {
+  padding: 5px 0;
+}
+
+.section-plans__price {
+  margin-bottom: 10px;
+  color: #e67e22;
+  font-size: 300%;
+  font-weight: 100;
+}
+
+.section-plans__price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.section-plans__price-meal {
+  font-size: 80%;
 }
 /*# sourceMappingURL=style.css.map */

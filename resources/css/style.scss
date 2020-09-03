@@ -1,6 +1,7 @@
 $headerWidth: 1140px;
 $primaryColor: #e67e22;
 $secondaryColor: #fff;
+$tertiaryColor: #f4f4f4;
 
 /*-------------------------------------*/
 /* BASIC SETUP */
@@ -139,6 +140,7 @@ h2::after {
 }
 
 /*----- LINKS -----*/
+
 a {
   &:link,
   &:visited {
@@ -156,6 +158,7 @@ a {
     border-bottom: 1px solid transparent;
   }
 }
+
 /*----- BUTTONS -----*/
 
 // Reversing background color and text color of a button when hover on it
@@ -182,6 +185,11 @@ a {
   &--full {
     @include reverseBtnStyle($primaryColor, $secondaryColor);
     margin-right: 10px;
+
+    &:link,
+    &:visited {
+      color: $secondaryColor;
+    }
 
     &:hover,
     &:active {
@@ -318,7 +326,7 @@ header {
 /*-------------------------------------*/
 
 .section-steps {
-  background-color: #f4f4f4;
+  background-color: $tertiaryColor;
 
   &__box {
     &:first-child {
@@ -423,5 +431,62 @@ header {
       border-radius: 50%;
       vertical-align: middle;
     }
+  }
+}
+
+/*-------------------------------------*/
+/* SIGN UP */
+/*-------------------------------------*/
+
+.section-plans {
+  background-color: $tertiaryColor;
+
+  &__box {
+    width: 90%;
+    margin-left: 5%;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px #efefef;
+
+    div {
+      padding: 15px;
+      border-bottom: 1px solid #e8e8e8;
+
+      &:first-child {
+        background-color: #fcfcfc;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      &:last-child {
+        text-align: center;
+        border: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      padding: 5px 0;
+    }
+  }
+
+  &__price {
+    margin-bottom: 10px;
+    color: $primaryColor;
+    font-size: 300%;
+    font-weight: 100;
+
+    span {
+      font-size: 30%;
+      font-weight: 300;
+    }
+  }
+
+  &__price-meal {
+    font-size: 80%;
   }
 }
