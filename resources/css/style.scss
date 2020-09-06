@@ -13,6 +13,10 @@ $tertiaryColor: #f4f4f4;
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   background-color: $secondaryColor;
 
@@ -167,19 +171,24 @@ a {
   color: $textColor;
 }
 
+%buttonStyle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+
+  font-weight: 300;
+  text-decoration: none;
+
+  border: 1px solid $primaryColor;
+  border-radius: 200px;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .btn {
   &:link,
   &:visited {
-    display: inline-block;
-    padding: 10px 30px;
-
-    font-weight: 300;
-    text-decoration: none;
-
-    border: 1px solid $primaryColor;
-    border-radius: 200px;
-
-    transition: background-color 0.3s, color 0.3s;
+    @extend %buttonStyle;
   }
 
   &--full {
@@ -488,5 +497,36 @@ header {
 
   &__price-meal {
     font-size: 80%;
+  }
+}
+
+/*-------------------------------------*/
+/* CONTACT FORM */
+/*-------------------------------------*/
+
+.section-contact__form {
+  width: 70%;
+  margin: 0 auto;
+
+  input[type='text'],
+  input[type='email'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  input[type='checkbox'] {
+    margin: 10px 5px 10px 0;
+  }
+
+  input[type='submit'] {
+    @extend %buttonStyle;
   }
 }

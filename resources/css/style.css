@@ -8,6 +8,10 @@
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   background-color: #fff;
   color: #555;
@@ -130,7 +134,8 @@ a:hover, a:active {
 }
 
 /*----- BUTTONS -----*/
-.btn:link, .btn:visited {
+.btn:link, .btn:visited, .section-contact__form input[type='submit'] {
+  cursor: pointer;
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -428,5 +433,31 @@ header {
 
 .section-plans__price-meal {
   font-size: 80%;
+}
+
+/*-------------------------------------*/
+/* CONTACT FORM */
+/*-------------------------------------*/
+.section-contact__form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.section-contact__form input[type='text'],
+.section-contact__form input[type='email'],
+.section-contact__form select,
+.section-contact__form textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.section-contact__form textarea {
+  height: 100px;
+}
+
+.section-contact__form input[type='checkbox'] {
+  margin: 10px 5px 10px 0;
 }
 /*# sourceMappingURL=style.css.map */
