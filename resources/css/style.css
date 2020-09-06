@@ -29,6 +29,14 @@ html {
   visibility: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*-------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*-------------------------------------*/
@@ -122,7 +130,6 @@ h2::after {
 a:link, a:visited {
   padding-bottom: 1px;
   color: #e67e22;
-  text-decoration: none;
   border-bottom: 1px solid #e67e22;
   -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
@@ -139,7 +146,6 @@ a:hover, a:active {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
-  text-decoration: none;
   border: 1px solid #e67e22;
   border-radius: 200px;
   -webkit-transition: background-color 0.3s, color 0.3s;
@@ -200,7 +206,6 @@ header {
 .main-nav {
   float: right;
   margin-top: 55px;
-  list-style: none;
 }
 
 .main-nav li {
@@ -212,7 +217,6 @@ header {
   padding: 8px 0;
   font-size: 90%;
   color: #fff;
-  text-decoration: none;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   -webkit-transition: border-bottom 0.2s;
@@ -239,7 +243,6 @@ header {
 
 .section-meals__showcase {
   width: 100%;
-  list-style: none;
 }
 
 .section-meals__showcase li {
@@ -411,10 +414,6 @@ header {
   border: 0;
 }
 
-.section-plans__box ul {
-  list-style: none;
-}
-
 .section-plans__box ul li {
   padding: 5px 0;
 }
@@ -459,5 +458,70 @@ header {
 
 .section-contact__form input[type='checkbox'] {
   margin: 10px 5px 10px 0;
+}
+
+/*-------------------------------------*/
+/* FOOTER */
+/*-------------------------------------*/
+footer {
+  padding: 40px;
+  font-size: 80%;
+  background-color: #333;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+}
+
+.footer-ul-style li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-ul-style li a:link,
+.footer-ul-style li a:visited {
+  color: #888;
+  border: 0;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.footer-ul-style li a:hover,
+.footer-ul-style li a:active {
+  color: #ddd;
+}
+
+.footer-ul-style li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav {
+  float: left;
+}
+
+.social-links {
+  float: right;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 170%;
+}
+
+.ion-social-facebook:hover {
+  color: #3b5988;
+}
+
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+  color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+  color: #517fa4;
 }
 /*# sourceMappingURL=style.css.map */
